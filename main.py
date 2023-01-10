@@ -38,7 +38,7 @@ with st.sidebar:
 if add_radio == 'Inclusão de rotas':
 
     image = Image.open('logo.png')
-    st.image(image, width=250)
+    st.image(image, width=350)
 
     st.title('INCLUSÃO DE ROTAS')
 
