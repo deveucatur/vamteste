@@ -32,7 +32,7 @@ with st.sidebar:
     st.title('MAIS OPÇÕES')
 
     add_radio = st.radio('Escolha um metodo',
-                         ("AOT","Diferente")
+                         ("AOT","")
                          )
 
 if add_radio == 'Inclusão de rotas':
