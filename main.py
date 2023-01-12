@@ -8,14 +8,14 @@ import json
 
 icone = Image.open('icone.png')
 st.set_page_config(
-    page_title="VAM Catedral",
+    page_title="Catedral",
     page_icon=icone,
     layout="centered")
 
-with open('ROTASBuscaO.json', 'r') as rotas:
+with open('RotasJobBuscaO.json', 'r') as rotas:
     dados = json.load(rotas)
 
-with open('ROTASBuscaO.json','r') as busca:
+with open('RotasJobBuscaO.json','r') as busca:
     BuscaOnibusRotas = json.load(busca)
 
 with open('CidadeBrasil.json', 'r') as dado:
@@ -32,7 +32,7 @@ with st.sidebar:
     st.title('MAIS OPÇÕES')
 
     add_radio = st.radio('Escolha um metodo',
-                         ("VAM", "Inclusão de rotas")
+                         ("AOT","Diferente")
                          )
 
 if add_radio == 'Inclusão de rotas':
@@ -42,7 +42,7 @@ if add_radio == 'Inclusão de rotas':
 
     st.title('INCLUSÃO DE ROTAS')
 
-    st.subheader('''Nos ajude com o aprimoriamento do VAM!
+    st.subheader('''Nos ajude com o aprimoriamento do AOT!
 Solicite aqui mais rotas.''')
     st.text('')
     col1, col2 = st.columns(2)
@@ -91,18 +91,15 @@ Solicite aqui mais rotas.''')
         elif origem_user == destino_user:
             st.markdown('Origem e Destino não podem ser iguais.')
         else:
-            st.markdown('Rota já inclusa ao VAM.')
+            st.markdown('Rota já solicitada ou inclusa ao AOT.')
 
     st.text("")
     st.text("")
     st.text("")
     st.text("")
-    st.caption("<h4 style='text-align: center; color: gray;'>Todos os direitos reservados</h2>", unsafe_allow_html=True)
-    st.caption(
-        "<h4 style='text-align: center; color: black;'>© 1964-2022 - v1 - Catedral - Empresa União Cascavel de Transportes e Turismo</h2>",
-        unsafe_allow_html=True)
 
-if add_radio == 'VAM':
+
+if add_radio == 'AOT':
     def plotarGrafComp(rota):
         d_precxdata = [float(x[2]) for x in rota if x[7] != "Aviao" and x[1] != "Catedral"]
         fig, ax = plt.subplots(figsize=(10, 6))
@@ -201,10 +198,10 @@ if add_radio == 'VAM':
 
     ################## Cod do front ############################
 
-    image = Image.open('logo.png')
-    st.image(image, width=250)
+    image = Image.open('images (1).png')
+    st.image(image, width=370)
 
-    st.title('Visualização de Análise de Mercado')
+    st.title('ANÁLISE DE OFERTAS DE TRANSPORTES')
 
     with open("OfertasConcatenadas.json", "r") as json_file:
         dados = json.load(json_file)
@@ -325,9 +322,5 @@ if add_radio == 'VAM':
     # image3 = Image.open('AdN.png')
     # st.image(image3, width=200, )
 
-    st.caption("<h4 style='text-align: center; color: gray;'>Todos os direitos reservados</h2>", unsafe_allow_html=True)
-    st.caption(
-        "<h4 style='text-align: center; color: black;'>© 1964-2022 - v1 - Catedral - Empresa União Cascavel de Transportes e Turismo</h2>",
-        unsafe_allow_html=True)
 
 

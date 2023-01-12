@@ -1,0 +1,20 @@
+{
+    "Origem": [
+        "BRAS\u00cdLIA",
+        "S\u00c3O PAULO",
+        "BRAS\u00cdLIA",
+        "TAGUATINGA",
+        "TERESINA",
+        "GOI\u00c2NIA",
+        "JUAZEIRO DO NORTE"
+    ],
+    "Destino": [
+        "GOI\u00c2NIA",
+        "SALVADOR",
+        "MONTES CLAROS",
+        "GOI\u00c2NIA",
+        "BRAS\u00cdLIA",
+        "ARACAJU",
+        "S\u00c3O PAULO"
+    ]
+}
